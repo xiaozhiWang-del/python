@@ -4,6 +4,9 @@ import pymysql
 
 db = pymysql.connect(host="localhost", user="root", passwd="123456", db="job_db", charset='utf8' )
 cursor = db.cursor()
+#cursor.execute("CREATE DATABASE job_db")
+#cursor.execute("CREATE TABLE jobs (job VARCHAR(255), redate CHAR(255),salary VARCHAR(255),url VARCHAR(255))")
+#cursor.execute("ALTER TABLE jobs ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
 
 Format_str = 'https://search.51job.com/list/000000,000000,0000,00,9,99,{key},2,1.html?lang=c&stype=&postchannel=0000&workyear=99&cotype=99&degreefrom=99&jobterm=99&companysize=99&providesalary=99&lonlat=0%2C0&radius=-1&ord_field=0&confirmdate=9&fromType=&dibiaoid=0&address=&line=&specialarea=00&from=&welfare='
 Headers = {
